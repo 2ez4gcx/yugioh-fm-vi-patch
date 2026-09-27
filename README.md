@@ -128,9 +128,10 @@ File khoảng 500 MB nên tính mất chừng mười giây. Chỉ cần so **8 
 PPF-O-Matic là công cụ nhỏ, miễn phí, chuyên áp bản vá PPF cho đĩa PS1; tìm
 "PPF-O-Matic 3" trên các trang lưu trữ công cụ ROM hacking.
 
-1. **Sao chép** file `.bin` gốc ra một bản khác, ví dụ `yugioh-fm-vi.bin`
-   (hoặc `yugioh-fm-vi-5-la.bin` nếu dùng bản 5 lá). PPF-O-Matic sửa thẳng vào
-   file được chọn, nên luôn giữ lại bản gốc.
+1. **Sao chép** file `.bin` gốc ra một bản khác và đặt tên theo bản bạn chọn:
+   `Yu-Gi-Oh! Forbidden Memories (VN).bin` (chỉ dịch) hoặc
+   `Yu-Gi-Oh! Forbidden Memories (VN)(Mod5).bin` (dịch + 5 lá). PPF-O-Matic
+   sửa thẳng vào file được chọn, nên luôn giữ lại bản gốc.
 2. Mở PPF-O-Matic. Ô **ISO file**: chọn bản sao vừa tạo. Ô **Patch**: chọn
    **một** trong hai file `yugioh-fm-vi.ppf` hoặc `yugioh-fm-vi-5-la.ppf`.
 3. Bấm **Apply**. Chỉ vài giây, chương trình báo "Successfully patched".
@@ -150,16 +151,27 @@ PATH"). Cách này **không sửa** file gốc mà tạo file mới, và tự ki
 Bản chỉ dịch:
 
 ```
-python apply_patch.py "TEN_FILE_GOC.bin" yugioh-fm-vi.ppf yugioh-fm-vi.bin
+python apply_patch.py "TEN_FILE_GOC.bin" yugioh-fm-vi.ppf
 ```
 
 Bản dịch + 5 lá:
 
 ```
-python apply_patch.py "TEN_FILE_GOC.bin" yugioh-fm-vi-5-la.ppf yugioh-fm-vi-5-la.bin
+python apply_patch.py "TEN_FILE_GOC.bin" yugioh-fm-vi-5-la.ppf
 ```
 
 (Trên macOS/Linux nếu `python` không có thì dùng `python3`.)
+
+File ra được đặt cạnh file gốc, tên mặc định:
+
+| Bản vá | File ra |
+|---|---|
+| `yugioh-fm-vi.ppf` | `Yu-Gi-Oh! Forbidden Memories (VN).bin` + `.cue` |
+| `yugioh-fm-vi-5-la.ppf` | `Yu-Gi-Oh! Forbidden Memories (VN)(Mod5).bin` + `.cue` |
+
+Muốn tên khác thì thêm tên file ra làm tham số thứ ba, ví dụ
+`python apply_patch.py "TEN_FILE_GOC.bin" yugioh-fm-vi.ppf "ten-cua-toi.bin"`.
+Nếu thư mục đã có file cùng tên, file đó bị ghi đè.
 
 3. Kịch bản kiểm SHA-256 của file gốc trước; nếu không đúng nó dừng lại và báo
    "Dia goc khong dung". Nếu đúng, nó in tên bản vá đang áp (`chi dich` hoặc
@@ -192,7 +204,7 @@ trùng tên file `.bin` đã vá, mở bằng Notepad và sửa tên file `.bin`
 cho khớp. Nội dung chuẩn chỉ có ba dòng, ví dụ:
 
 ```
-FILE "yugioh-fm-vi.bin" BINARY
+FILE "Yu-Gi-Oh! Forbidden Memories (VN).bin" BINARY
   TRACK 01 MODE2/2352
     INDEX 01 00:00:00
 ```

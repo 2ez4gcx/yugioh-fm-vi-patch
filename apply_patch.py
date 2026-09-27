@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Ap ban va PPF3 len dia goc, co kiem sha256 truoc va sau.
 
-Chay:  python apply_patch.py <dia_goc.bin> <ban_va.ppf> <dia_ra.bin>
+Chay:  python apply_patch.py <dia_goc.bin> <ban_va.ppf> [dia_ra.bin]
+Bo trong dia_ra.bin thi file ra dat canh dia goc, ten mac dinh:
+         Yu-Gi-Oh! Forbidden Memories (VN).bin        (chi dich)
+         Yu-Gi-Oh! Forbidden Memories (VN)(Mod5).bin  (dich + 5 la)
 Ban va:  yugioh-fm-vi.ppf       - chi dich
          yugioh-fm-vi-5-la.ppf  - dich + thang mot tran duoc 5 la bai
 Khong can cai them gi ngoai Python 3.  Khong sua dia goc.
@@ -16,9 +19,11 @@ SHA_GOC = '6e22494a45bf50fa2d239cd3819a57163a5f9b91e0365babc3e101509b5c3a7c'
 # ban va nhan biet qua dong mo ta trong dau file PPF (byte 6..55), nen doi ten file van dung
 SHA_DICH = {
     b'Yu-Gi-Oh! FM (SLUS-01411) - ban dich tieng Viet':
-        ('chi dich', 'e509924b19dde15ffccb5760af6c2e9714efefe85d5f9c9f78ff18e2a51ddf90'),
+        ('chi dich', 'e509924b19dde15ffccb5760af6c2e9714efefe85d5f9c9f78ff18e2a51ddf90',
+         'Yu-Gi-Oh! Forbidden Memories (VN).bin'),
     b'Yu-Gi-Oh! FM (SLUS-01411) - Viet hoa + 5 la/tran':
-        ('dich + 5 la moi tran', '3daf6f6cd7a2064d1eb8280bcfe6488614ec31f1febe677e340614e71a1566ae'),
+        ('dich + 5 la moi tran', '3daf6f6cd7a2064d1eb8280bcfe6488614ec31f1febe677e340614e71a1566ae',
+         'Yu-Gi-Oh! Forbidden Memories (VN)(Mod5).bin'),
 }
 
 
@@ -37,15 +42,19 @@ def viet_cue(dst):
     return cue
 
 
-def main(src, ppf, dst):
+def main(src, ppf, dst=None):
     data = bytearray(open(src, 'rb').read())
     if SHA_GOC and sha(data) != SHA_GOC:
         sys.exit('Dia goc khong dung (sha256 khong khop). Can dung ban .bin Mode2/2352 cua SLUS-01411.')
     p = open(ppf, 'rb').read()
     if p[:5] != b'PPF30' or p[5] != 2:
         sys.exit('Khong phai file PPF3.')
-    ten, sha_dich = SHA_DICH.get(p[6:56].rstrip(b' '), ('khong ro', None))
+    ten, sha_dich, ten_ra = SHA_DICH.get(p[6:56].rstrip(b' '), ('khong ro', None, 'dia_da_va.bin'))
     print('ban va: %s' % ten)
+    if not dst:
+        dst = os.path.join(os.path.dirname(os.path.abspath(src)), ten_ra)
+    if os.path.abspath(dst) == os.path.abspath(src):
+        sys.exit('File ra trung file goc - chon ten khac.')
     # dau PPF3: 56 imagetype, 57 blockcheck, 58 undo, 59 dummy; ban ghi tu 60
     # (co them 1024 byte khoi kiem neu bat blockcheck) - dung chuan PPF-O-Matic
     undo = p[58]
@@ -67,6 +76,6 @@ def main(src, ppf, dst):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 4:
+    if len(sys.argv) not in (3, 4):
         sys.exit(__doc__)
     main(*sys.argv[1:])
