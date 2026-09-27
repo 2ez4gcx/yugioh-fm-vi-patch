@@ -1,7 +1,7 @@
 # Yu-Gi-Oh! Forbidden Memories — bản dịch tiếng Việt
 
 Bản vá (patch) Việt hoá cho trò chơi PlayStation 1 *Yu-Gi-Oh! Forbidden
-Memories* (Konami, 1999, mã đĩa **SLUS-01411**, bản Mỹ).
+Memories* (Konami, bản Mỹ phát hành năm 2002, mã đĩa **SLUS-01411**).
 
 Đây là dự án của người hâm mộ, không liên quan tới Konami. Gói này **không
 chứa** đĩa gốc hay bất kỳ dữ liệu nào của trò chơi. Bạn cần có ảnh đĩa gốc của
@@ -23,7 +23,13 @@ màn tiêu đề, banner Đấu tự do, tên địa hình trong trận đấu. 
 phông chữ vẽ lại với độ rộng chữ thay đổi theo từng ký tự.
 
 **Giữ tiếng Anh có chủ đích:** tên lá bài (để dễ tra cứu, trao đổi mật mã),
-WIN / LOSE, LP, COM / YOU, thanh CHEST / ORDER ở màn xếp bài.
+WIN / LOSE, WINNER, LP, COM / YOU, thanh CHEST / ORDER ở màn xếp bài, nút END ở
+màn nhập tên, bảng luật đấu 2 người (chữ vẽ sẵn trong hình).
+
+**Chưa kiểm tra trực tiếp trong game:** các hộp thoại chỉ hiện khi thẻ nhớ gặp
+vấn đề (ghi đè, định dạng…), bảng luật đấu 2 người, và 6 tên địa hình chỉ hiện
+khi đánh lá bài địa hình (đã kiểm bằng ảnh ghép từ dữ liệu game). Gặp lỗi ở các
+chỗ này xin báo lại theo mục 8.
 
 ---
 
