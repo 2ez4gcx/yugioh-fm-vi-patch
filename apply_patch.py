@@ -2,6 +2,8 @@
 """Ap ban va PPF3 len dia goc, co kiem sha256 truoc va sau.
 
 Chay:  python apply_patch.py <dia_goc.bin> <ban_va.ppf> <dia_ra.bin>
+Ban va:  yugioh-fm-vi.ppf       - chi dich
+         yugioh-fm-vi-5-la.ppf  - dich + thang mot tran duoc 5 la bai
 Khong can cai them gi ngoai Python 3.  Khong sua dia goc.
 """
 import hashlib
@@ -9,9 +11,15 @@ import os
 import struct
 import sys
 
-# sha256 cua dia goc va cua dia dich - doc tu README de doi chieu
+# sha256 cua dia goc va cua dia da va - doc tu README de doi chieu
 SHA_GOC = '6e22494a45bf50fa2d239cd3819a57163a5f9b91e0365babc3e101509b5c3a7c'
-SHA_DICH = '685e55bf71ab376ec8d2a6390403e7902e2aa42f2171af578af02aa662f536ca'
+# ban va nhan biet qua dong mo ta trong dau file PPF (byte 6..55), nen doi ten file van dung
+SHA_DICH = {
+    b'Yu-Gi-Oh! FM (SLUS-01411) - ban dich tieng Viet':
+        ('chi dich', 'e509924b19dde15ffccb5760af6c2e9714efefe85d5f9c9f78ff18e2a51ddf90'),
+    b'Yu-Gi-Oh! FM (SLUS-01411) - Viet hoa + 5 la/tran':
+        ('dich + 5 la moi tran', '3daf6f6cd7a2064d1eb8280bcfe6488614ec31f1febe677e340614e71a1566ae'),
+}
 
 
 def sha(data):
@@ -36,6 +44,8 @@ def main(src, ppf, dst):
     p = open(ppf, 'rb').read()
     if p[:5] != b'PPF30' or p[5] != 2:
         sys.exit('Khong phai file PPF3.')
+    ten, sha_dich = SHA_DICH.get(p[6:56].rstrip(b' '), ('khong ro', None))
+    print('ban va: %s' % ten)
     # dau PPF3: 56 imagetype, 57 blockcheck, 58 undo, 59 dummy; ban ghi tu 60
     # (co them 1024 byte khoi kiem neu bat blockcheck) - dung chuan PPF-O-Matic
     undo = p[58]
@@ -52,8 +62,8 @@ def main(src, ppf, dst):
     h = sha(data)
     print('da ap %d ban ghi -> %s' % (n, dst))
     print('sha256 dia ra: %s' % h)
-    if SHA_DICH:
-        print('KHOP ban phat hanh' if h == SHA_DICH else 'KHONG KHOP - dia goc co the khac ban chuan')
+    if sha_dich:
+        print('KHOP ban phat hanh' if h == sha_dich else 'KHONG KHOP - dia goc co the khac ban chuan')
 
 
 if __name__ == '__main__':
