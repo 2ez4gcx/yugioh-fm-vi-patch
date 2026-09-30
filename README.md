@@ -41,7 +41,8 @@ bài, nút END ở màn nhập tên, bảng luật đấu 2 người, các chữ
 DUEL / DUEL SKILL / SPOILS ở màn kết quả.
 
 **Chưa kiểm tra trực tiếp trong game:** các hộp thoại chỉ hiện khi thẻ nhớ gặp
-vấn đề (ghi đè, định dạng…), bảng luật đấu 2 người, và 6 tên địa hình chỉ hiện
+vấn đề (ghi đè, định dạng…; đã kiểm bằng cách dựng lại chữ từ dữ liệu game), bảng
+luật đấu 2 người, và 6 tên địa hình chỉ hiện
 khi đánh lá bài địa hình (đã kiểm bằng ảnh ghép từ dữ liệu game). Gặp lỗi ở các
 chỗ này xin báo lại theo mục 9.
 
@@ -189,11 +190,11 @@ Tính SHA-256 của file đã vá (cùng cách ở mục 2). Kết quả đúng:
 
 | Bản vá | SHA-256 của file đã vá |
 |---|---|
-| `yugioh-fm-vi.ppf` (chỉ dịch) | `b7baa7a2a2eee0312f7ab536a85a6812a2edea904ba827d00fdfe57ba9280653` |
-| `yugioh-fm-vi-5-la.ppf` (dịch + 5 lá) | `83fdeb7984975bed67b4b5595a408a5e75e499de77c2245cf295a5230b7b4a29` |
+| `yugioh-fm-vi.ppf` (chỉ dịch) | `b918b398a28792ccc91b96afbf039a651c3adcfac821a13ab6abfc0c95527359` |
+| `yugioh-fm-vi-5-la.ppf` (dịch + 5 lá) | `4145dc4332b907d61991c0995574f67fdd07b4522ae893868997bd8858979f33` |
 
-Chỉ cần so 8 ký tự đầu: bản chỉ dịch bắt đầu bằng `b7baa7a2`, bản 5 lá bắt đầu
-bằng `83fdeb79`. Đúng chuỗi này thì file của bạn giống từng byte với bản đã
+Chỉ cần so 8 ký tự đầu: bản chỉ dịch bắt đầu bằng `b918b398`, bản 5 lá bắt đầu
+bằng `4145dc43`. Đúng chuỗi này thì file của bạn giống từng byte với bản đã
 được kiểm thử; mọi lỗi nếu có sẽ không phải do bước áp vá.
 
 Nếu áp bằng PPF-O-Matic thì cần thêm file `.cue` cho đĩa mới (cách Python đã
@@ -275,9 +276,12 @@ trước khi lỗi.
 ## 10. Lịch sử phiên bản
 
 - **Bản hiện tại:** câu thoại được dồn dòng: mỗi dòng lấp đầy ô thoại rồi mới
-  xuống dòng (626 trang thoại; trang có tên nhân vật chèn giữa câu, chữ màu hoặc
-  biểu tượng nút giữ nguyên cách xuống dòng cũ). SHA-256 đổi: bản chỉ dịch
-  `b7baa7a2…`, bản 5 lá `83fdeb79…`.
+  xuống dòng (623 trang thoại; trang có tên nhân vật chèn giữa câu, chữ màu,
+  biểu tượng nút hoặc tiếng hét kéo dài qua nhiều dòng giữ nguyên cách xuống dòng
+  cũ). Sửa các hộp thoại thẻ nhớ: bỏ chữ viết tắt "Đ.DẠNG" (nay là "ĐỊNH DẠNG"),
+  bỏ khoảng hở trong "TẢI ?", "LƯU ?", "TẢI VỀ  XONG!", bỏ dòng bị thụt đầu
+  ("ĐỪNG CẮM/RÚT THẺ NHỚ" / "Ở KHE THẺ NHỚ 1"). Thêm dấu câu còn thiếu ở 11 câu
+  thoại. SHA-256: bản chỉ dịch `b918b398…`, bản 5 lá `4145dc43…`.
 - **Bản thứ hai:** thêm bản vá `yugioh-fm-vi-5-la.ppf` (5 lá mỗi trận thắng,
   màn kết quả hiện đủ 5 lá). Sửa màn kết quả ở cả hai bản: các nhãn chữ nhỏ
   (BẠN / MÁY, ĐIỀU KIỆN THẮNG, THỐNG KÊ TẤN CÔNG / PHÒNG THỦ) trước đây mất chữ
