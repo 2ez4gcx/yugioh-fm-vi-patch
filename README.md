@@ -32,13 +32,13 @@ Nội dung gói:
 **Đã dịch (cả hai bản):** mô tả của cả 722 lá bài, toàn bộ cốt truyện và hội
 thoại, thông báo hệ thống, loại bài, sao hộ mệnh, danh hiệu, địa danh trên bản
 đồ, các nút menu, màn tiêu đề, banner Đấu tự do, tên địa hình trong trận đấu,
-màn kết quả trận đấu (kể cả các nhãn chữ nhỏ BẠN / MÁY, ĐIỀU KIỆN THẮNG, THỐNG
-KÊ…). Chữ có dấu đầy đủ, phông chữ vẽ lại với độ rộng chữ thay đổi theo từng ký tự.
+màn kết quả trận đấu (chữ vẽ KẾT QUẢ TRẬN ĐẤU, ĐÁNH GIÁ, PHẦN THƯỞNG, Hạng, và
+các nhãn chữ nhỏ BẠN / MÁY, ĐIỀU KIỆN THẮNG, THỐNG KÊ…). Chữ có dấu đầy đủ, phông chữ vẽ lại với độ rộng chữ thay đổi theo từng ký tự.
 
 **Giữ tiếng Anh có chủ đích:** tên lá bài (để dễ tra cứu, trao đổi mật mã),
 WIN / LOSE, WINNER, LP, COM / YOU trên sân đấu, thanh CHEST / ORDER ở màn xếp
-bài, nút END ở màn nhập tên, bảng luật đấu 2 người, các chữ vẽ sẵn RESULTS OF
-DUEL / DUEL SKILL / SPOILS ở màn kết quả.
+bài, nút END ở màn nhập tên, bảng luật đấu 2 người, POW / TEC (kiểu thắng) ở màn
+kết quả.
 
 **Chưa kiểm tra trực tiếp trong game:** các hộp thoại chỉ hiện khi thẻ nhớ gặp
 vấn đề (ghi đè, định dạng…; đã kiểm bằng cách dựng lại chữ từ dữ liệu game), bảng
@@ -61,7 +61,7 @@ chỗ này xin báo lại theo mục 9.
 | ![Thư viện](docs/anh/07-thu-vien.png) | ![Thống kê trận đấu](docs/anh/09-ket-qua-thong-ke.png) |
 | Mô tả lá bài trong Thư viện | Màn kết quả, trang thống kê (cả hai bản) |
 | ![Kết quả bản 5 lá](docs/anh/08-ket-qua-5-la.png) | |
-| Màn kết quả của **bản 5 lá**: lá thứ 2 trong 5 lá thắng được | |
+| Màn kết quả của **bản 5 lá**: lá thứ 3 trong 5 lá thắng được | |
 
 ## 1. Chuẩn bị ảnh đĩa gốc
 
@@ -190,11 +190,11 @@ Tính SHA-256 của file đã vá (cùng cách ở mục 2). Kết quả đúng:
 
 | Bản vá | SHA-256 của file đã vá |
 |---|---|
-| `yugioh-fm-vi.ppf` (chỉ dịch) | `b918b398a28792ccc91b96afbf039a651c3adcfac821a13ab6abfc0c95527359` |
-| `yugioh-fm-vi-5-la.ppf` (dịch + 5 lá) | `4145dc4332b907d61991c0995574f67fdd07b4522ae893868997bd8858979f33` |
+| `yugioh-fm-vi.ppf` (chỉ dịch) | `f6c5dd1dadad61f37a755f21736274bea0987900daf3c9cdfb7714200035caeb` |
+| `yugioh-fm-vi-5-la.ppf` (dịch + 5 lá) | `0e69edd282fce2ee848e606629344c63ebc7e01128111badbe6c16f195e86ed7` |
 
-Chỉ cần so 8 ký tự đầu: bản chỉ dịch bắt đầu bằng `b918b398`, bản 5 lá bắt đầu
-bằng `4145dc43`. Đúng chuỗi này thì file của bạn giống từng byte với bản đã
+Chỉ cần so 8 ký tự đầu: bản chỉ dịch bắt đầu bằng `f6c5dd1d`, bản 5 lá bắt đầu
+bằng `0e69edd2`. Đúng chuỗi này thì file của bạn giống từng byte với bản đã
 được kiểm thử; mọi lỗi nếu có sẽ không phải do bước áp vá.
 
 Nếu áp bằng PPF-O-Matic thì cần thêm file `.cue` cho đĩa mới (cách Python đã
@@ -276,12 +276,14 @@ trước khi lỗi.
 ## 10. Lịch sử phiên bản
 
 - **Bản hiện tại:** câu thoại được dồn dòng: mỗi dòng lấp đầy ô thoại rồi mới
-  xuống dòng (623 trang thoại; trang có tên nhân vật chèn giữa câu, chữ màu,
-  biểu tượng nút hoặc tiếng hét kéo dài qua nhiều dòng giữ nguyên cách xuống dòng
-  cũ). Sửa các hộp thoại thẻ nhớ: bỏ chữ viết tắt "Đ.DẠNG" (nay là "ĐỊNH DẠNG"),
+  xuống dòng (736 trang thoại, kể cả câu có tên người chơi; không tách từ ghép
+  như "pháp sư", "sức mạnh"; tiếng hét kéo dài giữ nguyên). Bỏ khoảng hở thừa
+  trước tên người chơi. Màn kết quả: vẽ lại chữ KẾT QUẢ TRẬN ĐẤU, ĐÁNH GIÁ,
+  PHẦN THƯỞNG, Hạng; cột số BÀI DÙNG / LP CÒN LẠI thẳng hàng. Sửa các hộp thoại
+  thẻ nhớ: bỏ chữ viết tắt "Đ.DẠNG" (nay là "ĐỊNH DẠNG"),
   bỏ khoảng hở trong "TẢI ?", "LƯU ?", "TẢI VỀ  XONG!", bỏ dòng bị thụt đầu
   ("ĐỪNG CẮM/RÚT THẺ NHỚ" / "Ở KHE THẺ NHỚ 1"). Thêm dấu câu còn thiếu ở 11 câu
-  thoại. SHA-256: bản chỉ dịch `b918b398…`, bản 5 lá `4145dc43…`.
+  thoại. SHA-256: bản chỉ dịch `f6c5dd1d…`, bản 5 lá `0e69edd2…`.
 - **Bản thứ hai:** thêm bản vá `yugioh-fm-vi-5-la.ppf` (5 lá mỗi trận thắng,
   màn kết quả hiện đủ 5 lá). Sửa màn kết quả ở cả hai bản: các nhãn chữ nhỏ
   (BẠN / MÁY, ĐIỀU KIỆN THẮNG, THỐNG KÊ TẤN CÔNG / PHÒNG THỦ) trước đây mất chữ
