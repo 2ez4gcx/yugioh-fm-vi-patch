@@ -189,11 +189,11 @@ Tính SHA-256 của file đã vá (cùng cách ở mục 2). Kết quả đúng:
 
 | Bản vá | SHA-256 của file đã vá |
 |---|---|
-| `yugioh-fm-vi.ppf` (chỉ dịch) | `e509924b19dde15ffccb5760af6c2e9714efefe85d5f9c9f78ff18e2a51ddf90` |
-| `yugioh-fm-vi-5-la.ppf` (dịch + 5 lá) | `3daf6f6cd7a2064d1eb8280bcfe6488614ec31f1febe677e340614e71a1566ae` |
+| `yugioh-fm-vi.ppf` (chỉ dịch) | `b7baa7a2a2eee0312f7ab536a85a6812a2edea904ba827d00fdfe57ba9280653` |
+| `yugioh-fm-vi-5-la.ppf` (dịch + 5 lá) | `83fdeb7984975bed67b4b5595a408a5e75e499de77c2245cf295a5230b7b4a29` |
 
-Chỉ cần so 8 ký tự đầu: bản chỉ dịch bắt đầu bằng `e509924b`, bản 5 lá bắt đầu
-bằng `3daf6f6c`. Đúng chuỗi này thì file của bạn giống từng byte với bản đã
+Chỉ cần so 8 ký tự đầu: bản chỉ dịch bắt đầu bằng `b7baa7a2`, bản 5 lá bắt đầu
+bằng `83fdeb79`. Đúng chuỗi này thì file của bạn giống từng byte với bản đã
 được kiểm thử; mọi lỗi nếu có sẽ không phải do bước áp vá.
 
 Nếu áp bằng PPF-O-Matic thì cần thêm file `.cue` cho đĩa mới (cách Python đã
@@ -274,11 +274,15 @@ trước khi lỗi.
 
 ## 10. Lịch sử phiên bản
 
-- **Bản hiện tại:** thêm bản vá `yugioh-fm-vi-5-la.ppf` (5 lá mỗi trận thắng,
+- **Bản hiện tại:** câu thoại được dồn dòng: mỗi dòng lấp đầy ô thoại rồi mới
+  xuống dòng (626 trang thoại; trang có tên nhân vật chèn giữa câu, chữ màu hoặc
+  biểu tượng nút giữ nguyên cách xuống dòng cũ). SHA-256 đổi: bản chỉ dịch
+  `b7baa7a2…`, bản 5 lá `83fdeb79…`.
+- **Bản thứ hai:** thêm bản vá `yugioh-fm-vi-5-la.ppf` (5 lá mỗi trận thắng,
   màn kết quả hiện đủ 5 lá). Sửa màn kết quả ở cả hai bản: các nhãn chữ nhỏ
   (BẠN / MÁY, ĐIỀU KIỆN THẮNG, THỐNG KÊ TẤN CÔNG / PHÒNG THỦ) trước đây mất chữ
-  có dấu và BẠN / MÁY lệch khỏi cột số liệu. SHA-256 của bản chỉ dịch đổi từ
-  `685e55bf…` sang `e509924b…`.
+  có dấu và BẠN / MÁY lệch khỏi cột số liệu. SHA-256: bản chỉ dịch `e509924b…`,
+  bản 5 lá `3daf6f6c…`.
 - **Bản đầu tiên:** `yugioh-fm-vi.ppf`, SHA-256 file đã vá `685e55bf…`.
 
 ## 11. Bản quyền
