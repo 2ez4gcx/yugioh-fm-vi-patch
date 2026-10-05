@@ -190,11 +190,11 @@ Tính SHA-256 của file đã vá (cùng cách ở mục 2). Kết quả đúng:
 
 | Bản vá | SHA-256 của file đã vá |
 |---|---|
-| `yugioh-fm-vi.ppf` (chỉ dịch) | `3a0a137fbc1c68056ecbb7a212d4b4456c2aef36d3cf08bde5c9ab2410e6c36a` |
-| `yugioh-fm-vi-5-la.ppf` (dịch + 5 lá) | `c90db54d3d3b7da91139833ec22368a56749719f952d0b5d0a720343c404a010` |
+| `yugioh-fm-vi.ppf` (chỉ dịch) | `27557b2bcf5872e93d776a52a2531d9a2079f17ca11c9566f4a2a7526234dd0c` |
+| `yugioh-fm-vi-5-la.ppf` (dịch + 5 lá) | `48de3b1cd47eb1d590e794a8517f18b45584a47f7b4a9d053be3d10e78984727` |
 
-Chỉ cần so 8 ký tự đầu: bản chỉ dịch bắt đầu bằng `3a0a137f`, bản 5 lá bắt đầu
-bằng `c90db54d`. Đúng chuỗi này thì file của bạn giống từng byte với bản đã
+Chỉ cần so 8 ký tự đầu: bản chỉ dịch bắt đầu bằng `27557b2b`, bản 5 lá bắt đầu
+bằng `48de3b1c`. Đúng chuỗi này thì file của bạn giống từng byte với bản đã
 được kiểm thử; mọi lỗi nếu có sẽ không phải do bước áp vá.
 
 Nếu áp bằng PPF-O-Matic thì cần thêm file `.cue` cho đĩa mới (cách Python đã
@@ -279,7 +279,7 @@ trước khi lỗi.
   (menu xác nhận nay là KO / CÓ). Hộp thoại định dạng thẻ nhớ thành "XÓA THẺ? / HỦY /
   CÓ". Menu cửa hàng căn giữa đều các dòng. Xưng hô thoại theo từng nhân vật (dân làng
   lớn tuổi xưng "tôi", Simon/Sadin "thần – Người", pháp sư "ta/bọn ta – ngươi"…).
-  SHA-256: bản chỉ dịch `3a0a137f…`, bản 5 lá `c90db54d…`. **Ai đang dùng bản trước nên áp lại bản này.**
+  SHA-256: bản chỉ dịch `27557b2b…`, bản 5 lá `48de3b1c…`. **Ai đang dùng bản trước nên áp lại bản này.**
 - **Bản thứ ba:** câu thoại được dồn dòng: mỗi dòng lấp đầy ô thoại rồi mới
   xuống dòng (736 trang thoại, kể cả câu có tên người chơi; không tách từ ghép
   như "pháp sư", "sức mạnh"; tiếng hét kéo dài giữ nguyên). Bỏ khoảng hở thừa
