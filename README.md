@@ -60,8 +60,8 @@ chỗ này xin báo lại theo mục 9.
 | Trận đấu | Đấu tự do |
 | ![Thư viện](docs/anh/07-thu-vien.png) | ![Thống kê trận đấu](docs/anh/09-ket-qua-thong-ke.png) |
 | Mô tả lá bài trong Thư viện | Màn kết quả, trang thống kê (cả hai bản) |
-| ![Kết quả bản 5 lá](docs/anh/08-ket-qua-5-la.png) | |
-| Màn kết quả của **bản 5 lá**: lá thứ 3 trong 5 lá thắng được | |
+| ![Kết quả bản 5 lá](docs/anh/08-ket-qua-5-la.png) | ![Xưng hô theo nhân vật](docs/anh/10-xung-ho.png) |
+| Màn kết quả của **bản 5 lá**: lá thứ 3 trong 5 lá thắng được | Xưng hô theo nhân vật: dân làng lớn tuổi xưng "tôi" |
 
 ## 1. Chuẩn bị ảnh đĩa gốc
 
