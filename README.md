@@ -190,11 +190,11 @@ Tính SHA-256 của file đã vá (cùng cách ở mục 2). Kết quả đúng:
 
 | Bản vá | SHA-256 của file đã vá |
 |---|---|
-| `yugioh-fm-vi.ppf` (chỉ dịch) | `4f7646843deaa26617f7147f2e76192c55208e70653732851da087496cb230b7` |
-| `yugioh-fm-vi-5-la.ppf` (dịch + 5 lá) | `c77bb36307122dc35321ada6d341991febe7f3fc9acf91787438b00c51386bc4` |
+| `yugioh-fm-vi.ppf` (chỉ dịch) | `9bdc41d0d5e1bd769925dec55a7d3959374d76a1cde387eb13e6e572e1375eb6` |
+| `yugioh-fm-vi-5-la.ppf` (dịch + 5 lá) | `88266b305d94e1c3bf5e24ee15ebca3ab23b283fa680a1bb16f834a0a3627703` |
 
-Chỉ cần so 8 ký tự đầu: bản chỉ dịch bắt đầu bằng `4f764684`, bản 5 lá bắt đầu
-bằng `c77bb363`. Đúng chuỗi này thì file của bạn giống từng byte với bản đã
+Chỉ cần so 8 ký tự đầu: bản chỉ dịch bắt đầu bằng `9bdc41d0`, bản 5 lá bắt đầu
+bằng `88266b30`. Đúng chuỗi này thì file của bạn giống từng byte với bản đã
 được kiểm thử; mọi lỗi nếu có sẽ không phải do bước áp vá.
 
 Nếu áp bằng PPF-O-Matic thì cần thêm file `.cue` cho đĩa mới (cách Python đã
@@ -276,8 +276,10 @@ trước khi lỗi.
 ## 10. Lịch sử phiên bản
 
 - **Bản hiện tại:** tên địa điểm trên bản đồ (Cung điện Pharaoh, Đền Rừng, Sân đấu…) được
-  căn giữa khung theo độ rộng chữ thật, không còn lệch trái phải. SHA-256: bản chỉ dịch
-  `4f764684…`, bản 5 lá `c77bb363…`. **Ai đang dùng bản trước nên áp lại bản này.**
+  căn giữa khung theo độ rộng chữ thật, không còn lệch trái phải. Tên Bảo Vật Ngàn Năm theo
+  bản Việt của truyện: Trò Chơi Ngàn Năm, Vòng Tròn Trí Tuệ Ngàn Năm, Quyền Trượng Ngàn Năm,
+  Con Mắt Ngàn Năm; câu của Yugi dùng "tâm trí". SHA-256: bản chỉ dịch
+  `9bdc41d0…`, bản 5 lá `88266b30…`. **Ai đang dùng bản trước nên áp lại bản này.**
 - **Bản thứ tư:** sửa lỗi **treo máy** khi chọn "VỀ MÀN TIÊU ĐỀ" ở cửa hàng bài
   (menu xác nhận nay là KO / CÓ). Hộp thoại định dạng thẻ nhớ thành "XÓA THẺ? / HỦY /
   CÓ". Menu cửa hàng căn giữa đều các dòng. Xưng hô thoại theo từng nhân vật (dân làng
