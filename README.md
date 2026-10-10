@@ -30,15 +30,16 @@ Nội dung gói:
 | `README.md` | Hướng dẫn này |
 
 **Đã dịch (cả hai bản):** mô tả của cả 722 lá bài, toàn bộ cốt truyện và hội
-thoại, thông báo hệ thống, loại bài, sao hộ mệnh, danh hiệu, địa danh trên bản
+thoại, thông báo hệ thống, loại bài, thủ hộ tinh, danh hiệu, địa danh trên bản
 đồ, các nút menu, màn tiêu đề, banner Đấu tự do, tên địa hình trong trận đấu,
 màn kết quả trận đấu (chữ vẽ KẾT QUẢ TRẬN ĐẤU, ĐÁNH GIÁ, PHẦN THƯỞNG, Hạng, và
 các nhãn chữ nhỏ BẠN / MÁY, ĐIỀU KIỆN THẮNG, THỐNG KÊ…). Chữ có dấu đầy đủ, phông chữ vẽ lại với độ rộng chữ thay đổi theo từng ký tự.
 
 **Giữ tiếng Anh có chủ đích:** tên lá bài (để dễ tra cứu, trao đổi mật mã),
-WIN / LOSE, WINNER, LP, COM / YOU trên sân đấu, thanh CHEST / ORDER ở màn xếp
-bài, nút END ở màn nhập tên, bảng luật đấu 2 người, POW / TEC (kiểu thắng) ở màn
-kết quả.
+WIN / LOSE, WINNER, LP, COM / YOU trên sân đấu, nhãn Magic / Equip / Trap /
+Ritual trên lá bài trong trận, thanh CHEST / ORDER ở màn xếp bài, nút END ở màn
+nhập tên, bảng luật đấu 2 người, POW / TEC (kiểu thắng) ở màn kết quả, GAME OVER,
+STEREO / MONO ở màn cài đặt.
 
 **Chưa kiểm tra trực tiếp trong game:** các hộp thoại chỉ hiện khi thẻ nhớ gặp
 vấn đề (ghi đè, định dạng…; đã kiểm bằng cách dựng lại chữ từ dữ liệu game), bảng
@@ -135,7 +136,7 @@ PPF-O-Matic là công cụ nhỏ, miễn phí, chuyên áp bản vá PPF cho đ�
    sửa thẳng vào file được chọn, nên luôn giữ lại bản gốc.
 2. Mở PPF-O-Matic. Ô **ISO file**: chọn bản sao vừa tạo. Ô **Patch**: chọn
    **một** trong hai file `yugioh-fm-vi.ppf` hoặc `yugioh-fm-vi-5-la.ppf`.
-3. Bấm **Apply**. Chỉ vài giây, chương trình báo "Successfully patched".
+3. Bấm **Apply**. Chỉ vài giây, chương trình báo "Patch successfully applied".
 4. Kiểm lại theo mục 5.
 
 Không áp file PPF thứ hai lên file đã vá: hai bản vá đều tính từ đĩa gốc.
@@ -190,11 +191,11 @@ Tính SHA-256 của file đã vá (cùng cách ở mục 2). Kết quả đúng:
 
 | Bản vá | SHA-256 của file đã vá |
 |---|---|
-| `yugioh-fm-vi.ppf` (chỉ dịch) | `04018346a0c5e4b6a68abf0c54189508781bd3bc69a1300459d1f702aef0a1b1` |
-| `yugioh-fm-vi-5-la.ppf` (dịch + 5 lá) | `eeba9ad3667fa29e9876f9ce4c1b90788637be160ba44f4173158473d3da9c9c` |
+| `yugioh-fm-vi.ppf` (chỉ dịch) | `5b3fb6c8fd25eb75473ae2d737cf8ba142b47bc13dd06ec1e6bc2f73489f3dd5` |
+| `yugioh-fm-vi-5-la.ppf` (dịch + 5 lá) | `fd0b2f3fdd6df6e08b3ce78e171ea43cb6b5fd504c95713840ba74fc64001e7f` |
 
-Chỉ cần so 8 ký tự đầu: bản chỉ dịch bắt đầu bằng `04018346`, bản 5 lá bắt đầu
-bằng `eeba9ad3`. Đúng chuỗi này thì file của bạn giống từng byte với bản đã
+Chỉ cần so 8 ký tự đầu: bản chỉ dịch bắt đầu bằng `5b3fb6c8`, bản 5 lá bắt đầu
+bằng `fd0b2f3f`. Đúng chuỗi này thì file của bạn giống từng byte với bản đã
 được kiểm thử; mọi lỗi nếu có sẽ không phải do bước áp vá.
 
 Nếu áp bằng PPF-O-Matic thì cần thêm file `.cue` cho đĩa mới (cách Python đã
@@ -217,7 +218,7 @@ Chỉ có ở `yugioh-fm-vi-5-la.ppf`; mọi thứ khác giống hệt bản ch�
 - **Thắng một trận được 5 lá bài thay vì 1.** Cả 5 lá đều rút ngẫu nhiên từ
   bài rơi của đối thủ, theo đúng cách bản gốc chọn lá thưởng (cùng bảng bài
   rơi, cùng hạng S/A/B, POW/TEC). Mỗi lá được rút riêng nên có thể trùng nhau.
-- **Màn kết quả hiện đủ 5 lá.** Ô SPOILS ghi số lá và thứ tự, ví dụ
+- **Màn kết quả hiện đủ 5 lá.** Ô PHẦN THƯỞNG ghi số lá và thứ tự, ví dụ
   `488   2/5`, dòng dưới là tên lá. Lá tự đổi sau khoảng 3 giây; bấm
   **↓** để xem lá kế tiếp, **↑** để xem lá trước. Nút ← / → vẫn chuyển trang
   kết quả như bản gốc.
@@ -275,7 +276,29 @@ trước khi lỗi.
 
 ## 10. Lịch sử phiên bản
 
-- **Bản hiện tại:** tên địa điểm trên bản đồ (Cung điện Pharaoh, Đền Rừng, Sân đấu…) được
+- **Bản hiện tại:** rà soát toàn bộ trước khi phát hành. Nhân vật **mấp máy môi** khi nói
+  như bản gốc (bản trước đứng im). Các dòng căn giữa trong hộp thẻ nhớ, CHÚ Ý, chơi 2 người,
+  đổi bài, màn mật mã được căn lại theo độ rộng chữ Việt; giữ lề thụt đầu dòng ở hộp chọn thủ
+  hộ tinh, màn đổi bài, màn mật mã và ô khe thẻ nhớ. Số trong mô tả lá bài hiện liền ("hơn
+  100 trận", không còn "1 0 0"); mô tả không để một chữ lẻ loi ở dòng cuối (trừ khi phải tách
+  từ ghép). Màn nhập mật mã: nút **THOÁT** (trước là "HẾT"). Câu giới thiệu trận ("Vòng loại
+  trận 1" / "Yugi đấu …") lại tách hai dòng như bản gốc; bỏ chữ thừa trong "EAi Cập…";
+  "TRIỆU Exodia" thành "GOM ĐỦ Exodia"; "ĐANG TẢI..." / "ĐANG LƯU..." đủ dấu chấm. Vẽ lại
+  tiêu đề **CÀI ĐẶT** (OPTION) và nhãn **MỚI!** (New!) ở rương bài; ngôi sao chọn STEREO /
+  MONO trỏ đúng chữ MONO. Tên thủ hộ tinh: Sao Thiên Vương / Sao Diêm Vương / Sao Hải Vương.
+  Sửa dấu ngã của chữ hoa, dịch nốt vài chỗ còn tiếng Anh, viết lại khoảng 70 câu thoại và
+  mô tả cho tự nhiên hơn. SHA-256: bản chỉ dịch `5b3fb6c8…`, bản 5 lá `fd0b2f3f…`. **Ai đang
+  dùng bản trước nên áp lại bản này.**
+- **Bản thứ bảy:** sửa tên địa điểm bị **mất chữ đầu, dồn sát mép trái** ("ng Lớn", "n thờ")
+  ở Sân đấu và Cửa hàng bài từ đoạn cốt truyện bọn pháp sư phá sân đấu cũ trở đi. Bản gốc lúc
+  đó đổi tên hai nơi này thành "Old Duel Ground" / "Old Card Shop" bằng một lệnh nhảy mà bản
+  trước trỏ nhầm; nay hiện đúng **"Sân đấu cũ"** / **"Cửa hàng bài cũ"**, căn giữa. Cửa hàng bài
+  ẩn có tên riêng **"Cửa hàng bài bí mật"** (trước hiện nhầm "Cửa hàng bài"). SHA-256: bản
+  chỉ dịch `dc9980f7…`, bản 5 lá `9fb310e7…`.
+- **Bản thứ sáu:** "Prince …" dịch là "Hoàng tử …" (trước là "Ngài …"); các pháp sư nói
+  "Không ngờ ngươi lại tới được tận đây!" thay cho câu dịch sát chữ. SHA-256: bản chỉ dịch
+  `2116045a…`, bản 5 lá `51cc4fbc…`. **Ai đang dùng bản trước nên áp lại bản này.**
+- **Bản thứ năm:** tên địa điểm trên bản đồ (Cung điện Pharaoh, Đền Rừng, Sân đấu…) được
   căn giữa khung theo độ rộng chữ thật, không còn lệch trái phải. Tên Bảo Vật Ngàn Năm theo
   bản Việt của truyện: Trò Chơi Ngàn Năm, Vòng Tròn Trí Tuệ Ngàn Năm, Quyền Trượng Ngàn Năm,
   Con Mắt Ngàn Năm; câu của Yugi dùng "tâm trí"; "Game Master" là Vua Trò Chơi; sửa thêm vài
