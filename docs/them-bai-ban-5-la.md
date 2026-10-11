@@ -2,7 +2,8 @@
 
 Trong bản gốc có 82 lá **không đối thủ nào làm rơi**, và 122 lá giá **999999 sao** (mức sao tối đa; mỗi trận thắng chỉ được 1–5 sao), 24 lá trong đó không có mật mã. Bản 5 lá sửa như sau; bản chỉ dịch giữ nguyên như bản gốc.
 
-- **Rơi bài:** 82 lá được thêm vào bảng rơi hạng **S/A (POW và TEC)** của những đối thủ dùng chính lá đó trong bộ bài (tối đa 3 người). Tỉ lệ mỗi lần rút: 8/2048 với lá cấp 7 trở lên, mảnh Exodia, phép, bẫy, nghi lễ, trang bị; 16/2048 với lá khác (mỗi trận thắng rút 5 lần). Phần thêm vào được lấy bớt từ lá đang có tỉ lệ cao nhất trong bảng đó, nên mọi lá vốn rơi được vẫn rơi được; bảng hạng B/C/D và bộ bài của đối thủ không đổi.
+- **Rơi bài:** 82 lá được thêm vào bảng rơi hạng **S/A (POW và TEC)** của những đối thủ dùng lá đó trong bộ bài (tối đa 3 người). 6 lá không đối thủ nào dùng thì rơi từ người dùng lá đi kèm (Gate Guardian Ritual theo Gate Guardian, Javelin Beetle Pact theo Javelin Beetle) hoặc từ các trùm cuối Heishin (lần 2), DarkNite, Nitemare (Hungry Burger, Mask of Shine & Dark, Dark Magic Ritual, Magician of Black Chaos). Tỉ lệ mỗi lần rút: 8/2048 với lá cấp 7 trở lên, mảnh Exodia, phép, bẫy, nghi lễ, trang bị; 16/2048 với lá khác. Mỗi trận thắng hạng S/A rút 5 lần, nên mỗi trận có khoảng 1,9% (lá 8/2048) hoặc 3,8% (lá 16/2048) được lá đó: trung bình 52 hoặc 26 trận thắng cho mỗi lá. Các lá cũ trong cùng bảng được giảm theo tỉ lệ để nhường chỗ: cả bảng giảm nhiều nhất 10,2% (bảng của Nitemare); vì làm tròn, vài lá có trọng số nhỏ giảm nhiều hơn một chút. Mọi lá vốn rơi được vẫn rơi được; bảng hạng B/C/D và bộ bài của đối thủ không đổi.
+- **Lưu ý:** Goddess of Whim và Barrel Lily chỉ rơi từ những người mà trận đấu trong truyện là tuỳ chọn (Dân làng 2, Dân làng 3, Teana (lần 2)); bỏ qua các trận đó thì vẫn mua được (100 và 40 sao).
 - **Giá sao:** mọi lá giá 999999 nay có giá theo cấp: cấp 1–2: 50, cấp 3: 100, cấp 4: 200, cấp 5: 400, cấp 6: 800, cấp 7: 1500, cấp 8: 2500, cấp 9–10: 4000, cấp 11–12: 6000; phép, bẫy, nghi lễ, trang bị: 1000; mỗi mảnh Exodia: 3000. Giá các lá khác không đổi. Mỗi mật mã vẫn chỉ dùng được một lần.
 - **Mật mã mới:** 24 lá chưa có mật mã nay dùng mật mã thật của lá bài Yu-Gi-Oh! (theo Yugipedia và YGOPRODeck; Psycho-Puppet và Mask of Shine & Dark chỉ có trong trò chơi điện tử, mật mã theo Yugipedia).
 
@@ -40,21 +41,21 @@ Trong bản gốc có 82 lá **không đối thủ nào làm rơi**, và 122 lá
 | Số | Lá bài | Rơi từ (hạng S/A) | Mật mã | Giá cũ → mới |
 |---:|---|---|---|---:|
 | 007 | Winged Dragon #1 | Mai Valentine, Lính pháp sư, Pháp sư Núi | `87796900` | 999999 → 200 |
-| 017 | Right Leg of the Forbidden One | Heishin (lần 2) | `08124921` | 999999 → 3000 |
-| 018 | Left Leg of the Forbidden One | Heishin (lần 2) | `44519536` | 999999 → 3000 |
+| 017 | Right Leg of the Forbidden One | Heishin, Heishin (lần 2) | `08124921` | 999999 → 3000 |
+| 018 | Left Leg of the Forbidden One | Heishin, Heishin (lần 2) | `44519536` | 999999 → 3000 |
 | 022 | Summoned Skull | Pháp sư Tối cao Martis, Hộ vệ Neku, Seto (lần 3) | `70781052` | 999999 → 800 |
 | 028 | Rock Ogre Grotto #1 | Dân làng 3, Jono (lần 2), Pháp sư Sa Mạc | `68846917` | 999999 → 100 |
 | 037 | Gaia the Dragon Champion | Pháp sư Tối cao Atenza, Pháp sư Tối cao Kepura, Seto (lần 3) | `66889139` | 999999 → 1500 |
 | 051 | Armored Lizard | Bandit Keith, Jono (lần 2) | `15480588` | 999999 → 200 |
 | 052 | Hercules Beetle | Pháp sư Rừng, Pháp sư Tối cao Anubisius, Pháp sư Tối cao Kepura | `52584282` | 999999 → 400 |
 | 056 | Larvae Moth | Weevil Underwood | `87756343` | 999999 → 50 |
-| 057 | Great Moth | Pháp sư Tối cao Anubisius, Nitemare | `14141448` | 999999 → 2500 |
+| 057 | Great Moth | Heishin, Pháp sư Tối cao Anubisius, Nitemare | `14141448` | 999999 → 2500 |
 | 060 | Great White | Isis, Lính pháp sư, Pháp sư Biển | `13429800` | 999999 → 200 |
 | 062 | Harpie Lady | Mai Valentine, Bandit Keith, Pháp sư Núi | `76812113` | 999999 → 200 |
 | 063 | Harpie Lady Sisters | Pháp sư Tối cao Atenza, Seto (lần 3), Nitemare | `12206212` | 999999 → 800 |
 | 064 | Tiger Axe | Jono (lần 2), Pháp sư Rừng, Pháp sư Đồng Cỏ | `49791927` | 999999 → 200 |
-| 067 | Perfectly Ultimate Great Moth | Pháp sư Tối cao Anubisius, Nitemare | `48579379` | 999999 → 2500 |
-| 069 | Thousand Dragon | Pháp sư Tối cao Atenza, Pháp sư Tối cao Kepura, Seto (lần 3) | `41462083` | 999999 → 1500 |
+| 067 | Perfectly Ultimate Great Moth | Heishin, Pháp sư Tối cao Anubisius, Nitemare | `48579379` | 999999 → 2500 |
+| 069 | Thousand Dragon | Heishin, Pháp sư Tối cao Atenza, Pháp sư Tối cao Kepura | `41462083` | 999999 → 1500 |
 | 072 | Cocoon of Evolution | Weevil Underwood, Pháp sư Rừng | `40240595` | 999999 → 100 |
 | 092 | Rabid Horseman | Pháp sư Rừng, Pháp sư Tối cao Anubisius, Pháp sư Đồng Cỏ | `94905343` | 999999 → 800 |
 | 217 | B. Skull Dragon | Pháp sư Tối cao Kepura, Seto (lần 3), Nitemare | `11901678` | 999999 → 4000 |
@@ -71,11 +72,11 @@ Trong bản gốc có 82 lá **không đối thủ nào làm rơi**, và 122 lá
 | 353 | Takriminos | Mai Valentine, Bandit Keith, Pháp sư Biển | `44073668` | 140 |
 | 354 | Stuffed Animal | Weevil Underwood, Pháp sư Đồng Cỏ | `71068263` | 60 |
 | 355 | Megasonic Eye | Kaiba, Pháp sư Tối cao Kepura, Hộ vệ Sebek | `07562372` | 290 |
-| 356 | Super War-lion | Hộ vệ Sebek | `33951077` | 999999 → 1500 |
+| 356 | Super War-lion | Heishin, Hộ vệ Sebek | `33951077` | 999999 → 1500 |
 | 357 | Yamadron | Pegasus, Kaiba, Pháp sư Núi | `70345785` | 320 |
 | 358 | Seiyaryu | Pháp sư Tối cao Atenza, Pháp sư Tối cao Kepura, Seto (lần 3) | `06740720` | 1700 |
 | 359 | Three-legged Zombies | Dân làng 3, Pháp sư Sa Mạc | `33734439` | 50 |
-| 360 | Zera The Mant | Heishin (lần 2) | `69123138` | 999999 → 2500 |
+| 360 | Zera The Mant | Heishin, Heishin (lần 2) | `69123138` | 999999 → 2500 |
 | 361 | Flying Penguin | Weevil Underwood, Lính pháp sư, Pháp sư Mê Cung | `05628232` | 70 |
 | 362 | Millennium Shield | Yami Bakura, Pháp sư Đồng Cỏ, Hộ vệ Sebek | `32012841` | 200 |
 | 363 | Fairy's Gift | Mai Valentine, Lính pháp sư, Pháp sư Tối cao Martis | `68401546` | 120 |
@@ -98,25 +99,25 @@ Trong bản gốc có 82 lá **không đối thủ nào làm rơi**, và 122 lá
 | 628 | Witch's Apprentice | Rex Raptor, Shadi | `80741828` | 999999 → 50 |
 | 640 | Acid Crawler | Dân làng 2, Dân làng 3, Pháp sư Rừng | `77568553` | 999999 → 100 |
 | 644 | Flame Viper | Seto, Shadi | `02830619` | 20 |
-| 667 | Gate Guardian Ritual | Heishin (lần 2), Seto (lần 3), Nitemare | `56483330` | 999999 → 1000 |
+| 667 | Gate Guardian Ritual | Seto (lần 2), Heishin (lần 2), Seto (lần 3) | `56483330` | 999999 → 1000 |
 | 669 | Shadow Spell | Hộ vệ Sebek, Seto (lần 3), DarkNite | `29267084` | 999999 → 1000 |
 | 670 | Black Luster Ritual | Seto | `55761792` | 100 |
 | 689 | Reverse Trap | Pháp sư Rừng, Pháp sư Mê Cung, DarkNite | `77622396` | 999999 → 1000 |
-| 696 | Javelin Beetle Pact | Pháp sư Tối cao Anubisius, Nitemare | `41182875` | 999999 → 1000 |
+| 696 | Javelin Beetle Pact | Heishin, Pháp sư Tối cao Anubisius, Nitemare | `41182875` | 999999 → 1000 |
 | 701 | Performance of Sword | Pháp sư Tối cao Kepura | `04849037` | 999999 → 800 |
 | 702 | Hungry Burger | Heishin (lần 2), DarkNite, Nitemare | `30243636` | 999999 → 800 |
-| 703 | Sengenjin | Nitemare | `76232340` | 999999 → 2500 |
-| 704 | Skull Guardian | Nitemare | `03627449` | 999999 → 1500 |
-| 705 | Tri-horned Dragon | Nitemare | `39111158` | 999999 → 2500 |
-| 706 | Serpent Night Dragon | Pháp sư Tối cao Atenza, Nitemare | `66516792` | 999999 → 1500 |
-| 708 | Cosmo Queen | DarkNite, Nitemare | `38999506` | 999999 → 2500 |
-| 709 | Chakra | Nitemare | `65393205` | 999999 → 1500 |
-| 710 | Crab Turtle | Pháp sư Tối cao Secmeton, Nitemare | `91782219` | 999999 → 2500 |
-| 711 | Mikazukinoyaiba | Pháp sư Tối cao Atenza, Nitemare | `38277918` | 999999 → 1500 |
-| 715 | Psycho-Puppet | Nitemare | `63459075` | 999999 → 1500 |
-| 716 | Garma Sword | Nitemare | `90844184` | 999999 → 1500 |
-| 717 | Javelin Beetle | Pháp sư Tối cao Anubisius, Nitemare | `26932788` | 999999 → 2500 |
-| 718 | Fortress Whale | Nitemare | `62337487` | 999999 → 1500 |
+| 703 | Sengenjin | Heishin, Nitemare | `76232340` | 999999 → 2500 |
+| 704 | Skull Guardian | Heishin, Nitemare | `03627449` | 999999 → 1500 |
+| 705 | Tri-horned Dragon | Heishin, Nitemare | `39111158` | 999999 → 2500 |
+| 706 | Serpent Night Dragon | Heishin, Pháp sư Tối cao Atenza, Nitemare | `66516792` | 999999 → 1500 |
+| 708 | Cosmo Queen | Heishin, DarkNite, Nitemare | `38999506` | 999999 → 2500 |
+| 709 | Chakra | Heishin, Nitemare | `65393205` | 999999 → 1500 |
+| 710 | Crab Turtle | Heishin, Pháp sư Tối cao Secmeton, Nitemare | `91782219` | 999999 → 2500 |
+| 711 | Mikazukinoyaiba | Heishin, Pháp sư Tối cao Atenza, Nitemare | `38277918` | 999999 → 1500 |
+| 715 | Psycho-Puppet | Heishin, Nitemare | `63459075` | 999999 → 1500 |
+| 716 | Garma Sword | Heishin, Nitemare | `90844184` | 999999 → 1500 |
+| 717 | Javelin Beetle | Heishin, Pháp sư Tối cao Anubisius, Nitemare | `26932788` | 999999 → 2500 |
+| 718 | Fortress Whale | Heishin, Nitemare | `62337487` | 999999 → 1500 |
 | 719 | Dokurorider | Pháp sư Tối cao Martis | `99721536` | 999999 → 800 |
 | 720 | Mask of Shine & Dark | Heishin (lần 2), DarkNite, Nitemare | `25110231` | 999999 → 800 |
 | 721 | Dark Magic Ritual | Heishin (lần 2), DarkNite, Nitemare | `76792184` | 999999 → 1000 |

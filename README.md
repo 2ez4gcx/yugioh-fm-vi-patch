@@ -192,10 +192,10 @@ Tính SHA-256 của file đã vá (cùng cách ở mục 2). Kết quả đúng:
 | Bản vá | SHA-256 của file đã vá |
 |---|---|
 | `yugioh-fm-vi.ppf` (chỉ dịch) | `5b3fb6c8fd25eb75473ae2d737cf8ba142b47bc13dd06ec1e6bc2f73489f3dd5` |
-| `yugioh-fm-vi-5-la.ppf` (dịch + 5 lá) | `e39604599a5f5d0b624fbaa1b1b27f24e5b2c98179ec6945230dedb0783bfed8` |
+| `yugioh-fm-vi-5-la.ppf` (dịch + 5 lá) | `b6f200e5df14588e4c2a2378072cd5a6011295b5a812a9b88e0d95a1b2e55740` |
 
 Chỉ cần so 8 ký tự đầu: bản chỉ dịch bắt đầu bằng `5b3fb6c8`, bản 5 lá bắt đầu
-bằng `e3960459`. Đúng chuỗi này thì file của bạn giống từng byte với bản đã
+bằng `b6f200e5`. Đúng chuỗi này thì file của bạn giống từng byte với bản đã
 được kiểm thử; mọi lỗi nếu có sẽ không phải do bước áp vá.
 
 Nếu áp bằng PPF-O-Matic thì cần thêm file `.cue` cho đĩa mới (cách Python đã
@@ -229,11 +229,15 @@ Chỉ có ở `yugioh-fm-vi-5-la.ppf`; mọi thứ khác giống hệt bản ch�
 - **Đủ 722 lá.** Bản gốc có 82 lá không đối thủ nào làm rơi, 122 lá giá
   999999 sao (mức tối đa, trong khi mỗi trận thắng chỉ được 1–5 sao) và 24 lá
   không có mật mã, nên muốn đủ bộ phải cheat. Bản 5 lá:
-  - cho 82 lá đó **rơi ở hạng S/A** (POW và TEC) từ những đối thủ dùng chính lá
-    đó trong bộ bài, ví dụ Black Luster Soldier từ Seto (lần 2) và Nitemare,
-    Blue-eyes Ultimate Dragon từ Seto (lần 3) và Nitemare. Đây là lá hiếm:
-    8/2048 hoặc 16/2048 mỗi lần rút. Lá vốn rơi được vẫn rơi được; bảng hạng
-    B/C/D và bộ bài của đối thủ giữ nguyên;
+  - cho 82 lá đó **rơi ở hạng S/A** (POW và TEC) từ những đối thủ dùng lá đó
+    trong bộ bài (6 lá không ai dùng thì từ người dùng lá đi kèm hoặc từ các trùm
+    cuối), ví dụ Black Luster Soldier từ Seto (lần 2) và Nitemare, Blue-eyes
+    Ultimate Dragon từ Seto (lần 3) và Nitemare. Đây là lá hiếm: 8/2048 hoặc
+    16/2048 mỗi lần rút, tức khoảng 1,9% hoặc 3,8% mỗi trận thắng hạng S/A. Các
+    lá cũ trong bảng được giảm theo tỉ lệ để nhường chỗ (cả bảng giảm nhiều nhất
+    khoảng 10%, ở Nitemare; vài lá trọng số nhỏ giảm hơn một chút vì làm tròn),
+    lá vốn rơi được vẫn rơi được; bảng hạng B/C/D và bộ bài của đối thủ giữ
+    nguyên;
   - hạ giá cả **122 lá 999999 sao** theo cấp (cấp 4: 200, cấp 7: 1500, cấp 8:
     2500, cấp 11–12: 6000; phép/bẫy/nghi lễ/trang bị: 1000; mỗi mảnh Exodia:
     3000);
@@ -243,6 +247,11 @@ Chỉ có ở `yugioh-fm-vi-5-la.ppf`; mọi thứ khác giống hệt bản ch�
 
   Danh sách đầy đủ (lá nào rơi từ ai, mật mã, giá cũ/mới):
   [docs/them-bai-ban-5-la.md](docs/them-bai-ban-5-la.md).
+
+  Ví dụ trong game: thắng Simon Muran hạng S, lá thứ 3/5 là Kattapillar, lá mà
+  bản gốc không bao giờ rơi.
+
+  <img src="docs/anh/11-roi-bai-moi.png" alt="Kattapillar rơi khi thắng Simon Muran" width="400">
 
 Mod này làm việc gom bài nhanh hơn nhiều, nên trò chơi dễ hơn bản gốc.
 
@@ -297,7 +306,7 @@ trước khi lỗi.
   trước đây không rơi nay rơi ở hạng S/A từ đối thủ dùng lá đó, 122 lá giá 999999
   sao được hạ giá theo cấp, 24 lá chưa có mật mã được thêm mật mã thật (mục 6 và
   [docs/them-bai-ban-5-la.md](docs/them-bai-ban-5-la.md)). SHA-256: bản 5 lá
-  `e3960459…`; bản chỉ dịch không đổi (`5b3fb6c8…`).
+  `b6f200e5…`; bản chỉ dịch không đổi (`5b3fb6c8…`).
 - **Bản thứ tám:** rà soát toàn bộ trước khi phát hành. Nhân vật **mấp máy môi** khi nói
   như bản gốc (bản trước đứng im). Các dòng căn giữa trong hộp thẻ nhớ, CHÚ Ý, chơi 2 người,
   đổi bài, màn mật mã được căn lại theo độ rộng chữ Việt; giữ lề thụt đầu dòng ở hộp chọn thủ
