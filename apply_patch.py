@@ -22,7 +22,7 @@ SHA_DICH = {
         ('chi dich', '5b3fb6c8fd25eb75473ae2d737cf8ba142b47bc13dd06ec1e6bc2f73489f3dd5',
          'Yu-Gi-Oh! Forbidden Memories (VN).bin'),
     b'Yu-Gi-Oh! FM (SLUS-01411) - Viet hoa + 5 la/tran':
-        ('dich + 5 la moi tran', 'fd0b2f3fdd6df6e08b3ce78e171ea43cb6b5fd504c95713840ba74fc64001e7f',
+        ('dich + 5 la moi tran', 'e39604599a5f5d0b624fbaa1b1b27f24e5b2c98179ec6945230dedb0783bfed8',
          'Yu-Gi-Oh! Forbidden Memories (VN)(Mod5).bin'),
 }
 

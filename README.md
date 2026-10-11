@@ -13,7 +13,7 @@ chỉnh lên ảnh đĩa đó.
 | Bản vá | Nội dung | Dành cho |
 |---|---|---|
 | `yugioh-fm-vi.ppf` | **Chỉ dịch.** Lối chơi giữ nguyên như bản gốc: thắng một trận được **1** lá bài. | Người muốn chơi đúng trò chơi gốc bằng tiếng Việt. |
-| `yugioh-fm-vi-5-la.ppf` | **Dịch + mod 5 lá.** Giống hệt bản trên, thêm: thắng một trận được **5** lá bài (xem mục 6). | Người thấy việc gom bài của bản gốc quá chậm. |
+| `yugioh-fm-vi-5-la.ppf` | **Dịch + mod 5 lá.** Giống hệt bản trên, thêm: thắng một trận được **5** lá bài, và gom được **đủ 722 lá** không cần cheat: lá nào cũng rơi được hoặc mua được bằng mật mã với giá hợp lý (xem mục 6). | Người thấy việc gom bài của bản gốc quá chậm. |
 
 Cả hai bản vá đều áp **trực tiếp lên ảnh đĩa gốc** (không áp bản này chồng lên
 bản kia). Muốn đổi sang bản còn lại thì áp lại từ bản sao của đĩa gốc. Thẻ nhớ
@@ -192,10 +192,10 @@ Tính SHA-256 của file đã vá (cùng cách ở mục 2). Kết quả đúng:
 | Bản vá | SHA-256 của file đã vá |
 |---|---|
 | `yugioh-fm-vi.ppf` (chỉ dịch) | `5b3fb6c8fd25eb75473ae2d737cf8ba142b47bc13dd06ec1e6bc2f73489f3dd5` |
-| `yugioh-fm-vi-5-la.ppf` (dịch + 5 lá) | `fd0b2f3fdd6df6e08b3ce78e171ea43cb6b5fd504c95713840ba74fc64001e7f` |
+| `yugioh-fm-vi-5-la.ppf` (dịch + 5 lá) | `e39604599a5f5d0b624fbaa1b1b27f24e5b2c98179ec6945230dedb0783bfed8` |
 
 Chỉ cần so 8 ký tự đầu: bản chỉ dịch bắt đầu bằng `5b3fb6c8`, bản 5 lá bắt đầu
-bằng `fd0b2f3f`. Đúng chuỗi này thì file của bạn giống từng byte với bản đã
+bằng `e3960459`. Đúng chuỗi này thì file của bạn giống từng byte với bản đã
 được kiểm thử; mọi lỗi nếu có sẽ không phải do bước áp vá.
 
 Nếu áp bằng PPF-O-Matic thì cần thêm file `.cue` cho đĩa mới (cách Python đã
@@ -226,6 +226,23 @@ Chỉ có ở `yugioh-fm-vi-5-la.ppf`; mọi thứ khác giống hệt bản ch�
   (CHEST) và vào danh sách bài mới. Mỗi loại bài vẫn tối đa 250 lá như bản gốc.
 - Thua trận không được lá nào, như bản gốc.
 - Các trận không có phần thưởng ở bản gốc thì bản 5 lá cũng không có.
+- **Đủ 722 lá.** Bản gốc có 82 lá không đối thủ nào làm rơi, 122 lá giá
+  999999 sao (mức tối đa, trong khi mỗi trận thắng chỉ được 1–5 sao) và 24 lá
+  không có mật mã, nên muốn đủ bộ phải cheat. Bản 5 lá:
+  - cho 82 lá đó **rơi ở hạng S/A** (POW và TEC) từ những đối thủ dùng chính lá
+    đó trong bộ bài, ví dụ Black Luster Soldier từ Seto (lần 2) và Nitemare,
+    Blue-eyes Ultimate Dragon từ Seto (lần 3) và Nitemare. Đây là lá hiếm:
+    8/2048 hoặc 16/2048 mỗi lần rút. Lá vốn rơi được vẫn rơi được; bảng hạng
+    B/C/D và bộ bài của đối thủ giữ nguyên;
+  - hạ giá cả **122 lá 999999 sao** theo cấp (cấp 4: 200, cấp 7: 1500, cấp 8:
+    2500, cấp 11–12: 6000; phép/bẫy/nghi lễ/trang bị: 1000; mỗi mảnh Exodia:
+    3000);
+  - thêm **mật mã thật** của lá bài Yu-Gi-Oh! cho 24 lá chưa có, ví dụ Black
+    Luster Soldier `05405694`, Blue-eyes Ultimate Dragon `23995346`, Gate
+    Guardian `25833572`, Magician of Black Chaos `30208479`.
+
+  Danh sách đầy đủ (lá nào rơi từ ai, mật mã, giá cũ/mới):
+  [docs/them-bai-ban-5-la.md](docs/them-bai-ban-5-la.md).
 
 Mod này làm việc gom bài nhanh hơn nhiều, nên trò chơi dễ hơn bản gốc.
 
@@ -276,7 +293,12 @@ trước khi lỗi.
 
 ## 10. Lịch sử phiên bản
 
-- **Bản hiện tại:** rà soát toàn bộ trước khi phát hành. Nhân vật **mấp máy môi** khi nói
+- **Bản hiện tại:** chỉ đổi bản 5 lá. Gom được **đủ 722 lá** không cần cheat: 82 lá
+  trước đây không rơi nay rơi ở hạng S/A từ đối thủ dùng lá đó, 122 lá giá 999999
+  sao được hạ giá theo cấp, 24 lá chưa có mật mã được thêm mật mã thật (mục 6 và
+  [docs/them-bai-ban-5-la.md](docs/them-bai-ban-5-la.md)). SHA-256: bản 5 lá
+  `e3960459…`; bản chỉ dịch không đổi (`5b3fb6c8…`).
+- **Bản thứ tám:** rà soát toàn bộ trước khi phát hành. Nhân vật **mấp máy môi** khi nói
   như bản gốc (bản trước đứng im). Các dòng căn giữa trong hộp thẻ nhớ, CHÚ Ý, chơi 2 người,
   đổi bài, màn mật mã được căn lại theo độ rộng chữ Việt; giữ lề thụt đầu dòng ở hộp chọn thủ
   hộ tinh, màn đổi bài, màn mật mã và ô khe thẻ nhớ. Số trong mô tả lá bài hiện liền ("hơn
