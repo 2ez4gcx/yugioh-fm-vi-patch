@@ -191,11 +191,11 @@ Tính SHA-256 của file đã vá (cùng cách ở mục 2). Kết quả đúng:
 
 | Bản vá | SHA-256 của file đã vá |
 |---|---|
-| `yugioh-fm-vi.ppf` (chỉ dịch) | `5b3fb6c8fd25eb75473ae2d737cf8ba142b47bc13dd06ec1e6bc2f73489f3dd5` |
-| `yugioh-fm-vi-5-la.ppf` (dịch + 5 lá) | `b6f200e5df14588e4c2a2378072cd5a6011295b5a812a9b88e0d95a1b2e55740` |
+| `yugioh-fm-vi.ppf` (chỉ dịch) | `df2efd2fe767e1972d6bda62a40b811ef80573d13c29e43fd3bb68d443b58bc9` |
+| `yugioh-fm-vi-5-la.ppf` (dịch + 5 lá) | `a3ba3637dd14463e0d4215bcdff76e2586af0ada1546da237ce6246b349bfc42` |
 
-Chỉ cần so 8 ký tự đầu: bản chỉ dịch bắt đầu bằng `5b3fb6c8`, bản 5 lá bắt đầu
-bằng `b6f200e5`. Đúng chuỗi này thì file của bạn giống từng byte với bản đã
+Chỉ cần so 8 ký tự đầu: bản chỉ dịch bắt đầu bằng `df2efd2f`, bản 5 lá bắt đầu
+bằng `a3ba3637`. Đúng chuỗi này thì file của bạn giống từng byte với bản đã
 được kiểm thử; mọi lỗi nếu có sẽ không phải do bước áp vá.
 
 Nếu áp bằng PPF-O-Matic thì cần thêm file `.cue` cho đĩa mới (cách Python đã
@@ -302,7 +302,11 @@ trước khi lỗi.
 
 ## 10. Lịch sử phiên bản
 
-- **Bản hiện tại:** chỉ đổi bản 5 lá. Gom được **đủ 722 lá** không cần cheat: 82 lá
+- **Bản hiện tại:** thêm dòng ghi công ở màn BẤM NÚT START, dưới dòng © 1996 KAZUKI
+  TAKAHASHI: "Bản Việt hóa phi lợi nhuận bởi KhươngKid" (bản 5 lá: "Bản Việt hóa và mod phi
+  lợi nhuận bởi KhươngKid"). Dòng này chỉ hiện ở màn đó, không hiện ở menu sau khi bấm START;
+  mọi màn khác giữ nguyên. SHA-256: bản chỉ dịch `df2efd2f…`, bản 5 lá `a3ba3637…`.
+- **Bản thứ chín:** chỉ đổi bản 5 lá. Gom được **đủ 722 lá** không cần cheat: 82 lá
   trước đây không rơi nay rơi ở hạng S/A từ đối thủ dùng lá đó, 122 lá giá 999999
   sao được hạ giá theo cấp, 24 lá chưa có mật mã được thêm mật mã thật (mục 6 và
   [docs/them-bai-ban-5-la.md](docs/them-bai-ban-5-la.md)). SHA-256: bản 5 lá
