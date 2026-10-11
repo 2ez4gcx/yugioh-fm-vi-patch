@@ -12,12 +12,15 @@ chỉnh lên ảnh đĩa đó.
 
 | Bản vá | Nội dung | Dành cho |
 |---|---|---|
-| `yugioh-fm-vi.ppf` | **Chỉ dịch.** Lối chơi giữ nguyên như bản gốc: thắng một trận được **1** lá bài. | Người muốn chơi đúng trò chơi gốc bằng tiếng Việt. |
-| `yugioh-fm-vi-5-la.ppf` | **Dịch + mod 5 lá.** Giống hệt bản trên, thêm: thắng một trận được **5** lá bài, và gom được **đủ 722 lá** không cần cheat: lá nào cũng rơi được hoặc mua được bằng mật mã với giá hợp lý (xem mục 6). | Người thấy việc gom bài của bản gốc quá chậm. |
+| `yugioh-fm-vi.ppf` | **Chỉ dịch.** Thắng một trận được **1** lá bài như bản gốc. | Người muốn chơi gần đúng trò chơi gốc bằng tiếng Việt. |
+| `yugioh-fm-vi-5-la.ppf` | **Dịch + mod 5 lá.** Giống hệt bản trên, thêm: thắng một trận được **5** lá bài (xem mục 7). | Người thấy việc gom bài của bản gốc quá chậm. |
+
+**Cả hai bản** đều gom được **đủ 722 lá** không cần cheat: lá nào cũng rơi
+được khi thắng, hoặc mua được bằng mật mã với giá hợp lý (xem mục 6).
 
 Cả hai bản vá đều áp **trực tiếp lên ảnh đĩa gốc** (không áp bản này chồng lên
 bản kia). Muốn đổi sang bản còn lại thì áp lại từ bản sao của đĩa gốc. Thẻ nhớ
-dùng chung được giữa hai bản (mục 7).
+dùng chung được giữa hai bản (mục 8).
 
 Nội dung gói:
 
@@ -28,6 +31,8 @@ Nội dung gói:
 | `apply_patch.py` | Trình áp vá bằng Python: nhận ra bản vá nào, tự kiểm SHA-256 trước và sau, tự tạo `.cue` |
 | `tao_cue.bat` | Tạo file `.cue` đúng tên cho file `.bin` (kéo thả hoặc nháy đúp) |
 | `README.md` | Hướng dẫn này |
+| `docs/du-722-la-bai.md` | Danh sách lá bài được thêm vào bảng rơi, mật mã mới và giá mới (mục 6) |
+| `docs/anh/` | Ảnh chụp trong game dùng trong hướng dẫn này |
 
 **Đã dịch (cả hai bản):** mô tả của cả 722 lá bài, toàn bộ cốt truyện và hội
 thoại, thông báo hệ thống, loại bài, thủ hộ tinh, danh hiệu, địa danh trên bản
@@ -45,7 +50,7 @@ STEREO / MONO ở màn cài đặt.
 vấn đề (ghi đè, định dạng…; đã kiểm bằng cách dựng lại chữ từ dữ liệu game), bảng
 luật đấu 2 người, và 6 tên địa hình chỉ hiện
 khi đánh lá bài địa hình (đã kiểm bằng ảnh ghép từ dữ liệu game). Gặp lỗi ở các
-chỗ này xin báo lại theo mục 9.
+chỗ này xin báo lại theo mục 10.
 
 ---
 
@@ -123,7 +128,7 @@ sha256sum "TEN_FILE.bin"
 ```
 
 File khoảng 500 MB nên tính mất chừng mười giây. Chỉ cần so **8 ký tự đầu** là
-đủ để nhận ra: đĩa gốc đúng bắt đầu bằng `6e22494a`. Nếu khác, xem mục 8.
+đủ để nhận ra: đĩa gốc đúng bắt đầu bằng `6e22494a`. Nếu khác, xem mục 9.
 
 ## 3. Áp vá — cách 1: PPF-O-Matic (Windows, không cần cài gì)
 
@@ -191,11 +196,11 @@ Tính SHA-256 của file đã vá (cùng cách ở mục 2). Kết quả đúng:
 
 | Bản vá | SHA-256 của file đã vá |
 |---|---|
-| `yugioh-fm-vi.ppf` (chỉ dịch) | `df2efd2fe767e1972d6bda62a40b811ef80573d13c29e43fd3bb68d443b58bc9` |
-| `yugioh-fm-vi-5-la.ppf` (dịch + 5 lá) | `a3ba3637dd14463e0d4215bcdff76e2586af0ada1546da237ce6246b349bfc42` |
+| `yugioh-fm-vi.ppf` (chỉ dịch) | `1d106601cb3726c7391841449662fbdba56c0c9972c8cb6c1d720dced69e9ccb` |
+| `yugioh-fm-vi-5-la.ppf` (dịch + 5 lá) | `bd10e440b611fe7c99c9c1421d6b3491a940ebc82aa1b36084729001499588df` |
 
-Chỉ cần so 8 ký tự đầu: bản chỉ dịch bắt đầu bằng `df2efd2f`, bản 5 lá bắt đầu
-bằng `a3ba3637`. Đúng chuỗi này thì file của bạn giống từng byte với bản đã
+Chỉ cần so 8 ký tự đầu: bản chỉ dịch bắt đầu bằng `1d106601`, bản 5 lá bắt đầu
+bằng `bd10e440`. Đúng chuỗi này thì file của bạn giống từng byte với bản đã
 được kiểm thử; mọi lỗi nếu có sẽ không phải do bước áp vá.
 
 Nếu áp bằng PPF-O-Matic thì cần thêm file `.cue` cho đĩa mới (cách Python đã
@@ -211,7 +216,40 @@ FILE "Yu-Gi-Oh! Forbidden Memories (VN).bin" BINARY
     INDEX 01 00:00:00
 ```
 
-## 6. Bản 5 lá khác gì
+## 6. Đủ 722 lá bài (cả hai bản)
+
+Bản gốc có 82 lá không đối thủ nào làm rơi, 122 lá giá 999999 sao (mức tối
+đa, trong khi mỗi trận thắng chỉ được 1–5 sao) và 24 lá không có mật mã, nên
+muốn đủ bộ phải cheat. Cả hai bản vá đều sửa như sau:
+
+- cho 82 lá đó **rơi ở hạng S/A** (POW và TEC) từ những đối thủ dùng lá đó
+  trong bộ bài (6 lá không ai dùng thì từ người dùng lá đi kèm hoặc từ các trùm
+  cuối), ví dụ Black Luster Soldier từ Seto (lần 2) và Nitemare, Blue-eyes
+  Ultimate Dragon từ Seto (lần 3) và Nitemare. Đây là lá hiếm: 8/2048 hoặc
+  16/2048 mỗi lần rút, tức khoảng 0,4% hoặc 0,8% mỗi trận thắng hạng S/A ở bản
+  chỉ dịch (1 lá mỗi trận), 1,9% hoặc 3,8% ở bản 5 lá. Các lá cũ trong bảng
+  được giảm theo tỉ lệ để nhường chỗ (cả bảng giảm nhiều nhất khoảng 10%, ở
+  Nitemare; vài lá trọng số nhỏ giảm hơn một chút vì làm tròn), lá vốn rơi
+  được vẫn rơi được; bảng hạng B/C/D và bộ bài của đối thủ giữ nguyên;
+- hạ giá cả **122 lá 999999 sao** theo cấp (cấp 4: 200, cấp 7: 1500, cấp 8:
+  2500, cấp 11–12: 6000; phép/bẫy/nghi lễ/trang bị: 1000; mỗi mảnh Exodia:
+  3000);
+- thêm **mật mã thật** của lá bài Yu-Gi-Oh! cho 24 lá chưa có, ví dụ Black
+  Luster Soldier `05405694`, Blue-eyes Ultimate Dragon `23995346`, Gate
+  Guardian `25833572`, Magician of Black Chaos `30208479`.
+
+Danh sách đầy đủ (lá nào rơi từ ai, mật mã, giá cũ/mới):
+[docs/du-722-la-bai.md](docs/du-722-la-bai.md).
+
+Ví dụ trong game (bản 5 lá): thắng Simon Muran hạng S, lá thứ 3/5 là
+Kattapillar, lá mà bản gốc không bao giờ rơi.
+
+<img src="docs/anh/11-roi-bai-moi.png" alt="Kattapillar rơi khi thắng Simon Muran" width="400">
+
+Phần này chỉ đổi bảng bài rơi, giá và mật mã; cốt truyện, đối thủ và luật đấu
+giữ nguyên như bản gốc.
+
+## 7. Bản 5 lá khác gì
 
 Chỉ có ở `yugioh-fm-vi-5-la.ppf`; mọi thứ khác giống hệt bản chỉ dịch.
 
@@ -226,36 +264,10 @@ Chỉ có ở `yugioh-fm-vi-5-la.ppf`; mọi thứ khác giống hệt bản ch�
   (CHEST) và vào danh sách bài mới. Mỗi loại bài vẫn tối đa 250 lá như bản gốc.
 - Thua trận không được lá nào, như bản gốc.
 - Các trận không có phần thưởng ở bản gốc thì bản 5 lá cũng không có.
-- **Đủ 722 lá.** Bản gốc có 82 lá không đối thủ nào làm rơi, 122 lá giá
-  999999 sao (mức tối đa, trong khi mỗi trận thắng chỉ được 1–5 sao) và 24 lá
-  không có mật mã, nên muốn đủ bộ phải cheat. Bản 5 lá:
-  - cho 82 lá đó **rơi ở hạng S/A** (POW và TEC) từ những đối thủ dùng lá đó
-    trong bộ bài (6 lá không ai dùng thì từ người dùng lá đi kèm hoặc từ các trùm
-    cuối), ví dụ Black Luster Soldier từ Seto (lần 2) và Nitemare, Blue-eyes
-    Ultimate Dragon từ Seto (lần 3) và Nitemare. Đây là lá hiếm: 8/2048 hoặc
-    16/2048 mỗi lần rút, tức khoảng 1,9% hoặc 3,8% mỗi trận thắng hạng S/A. Các
-    lá cũ trong bảng được giảm theo tỉ lệ để nhường chỗ (cả bảng giảm nhiều nhất
-    khoảng 10%, ở Nitemare; vài lá trọng số nhỏ giảm hơn một chút vì làm tròn),
-    lá vốn rơi được vẫn rơi được; bảng hạng B/C/D và bộ bài của đối thủ giữ
-    nguyên;
-  - hạ giá cả **122 lá 999999 sao** theo cấp (cấp 4: 200, cấp 7: 1500, cấp 8:
-    2500, cấp 11–12: 6000; phép/bẫy/nghi lễ/trang bị: 1000; mỗi mảnh Exodia:
-    3000);
-  - thêm **mật mã thật** của lá bài Yu-Gi-Oh! cho 24 lá chưa có, ví dụ Black
-    Luster Soldier `05405694`, Blue-eyes Ultimate Dragon `23995346`, Gate
-    Guardian `25833572`, Magician of Black Chaos `30208479`.
-
-  Danh sách đầy đủ (lá nào rơi từ ai, mật mã, giá cũ/mới):
-  [docs/them-bai-ban-5-la.md](docs/them-bai-ban-5-la.md).
-
-  Ví dụ trong game: thắng Simon Muran hạng S, lá thứ 3/5 là Kattapillar, lá mà
-  bản gốc không bao giờ rơi.
-
-  <img src="docs/anh/11-roi-bai-moi.png" alt="Kattapillar rơi khi thắng Simon Muran" width="400">
 
 Mod này làm việc gom bài nhanh hơn nhiều, nên trò chơi dễ hơn bản gốc.
 
-## 7. Chạy trên giả lập
+## 8. Chạy trên giả lập
 
 Mở file **`.cue`** (không phải `.bin`) bằng giả lập. Đã thử trên PCSX-Redux;
 DuckStation, ePSXe, Mednafen/Beetle PSX đều đọc được BIN/CUE.
@@ -268,9 +280,10 @@ DuckStation, ePSXe, Mednafen/Beetle PSX đều đọc được BIN/CUE.
   bản khác (bản tiếng Anh, hoặc bản vá còn lại): save state giữ nguyên toàn bộ
   bộ nhớ lúc lưu, nên vẫn chạy code và chữ cũ dù đĩa mới đã đúng. Vào game bằng
   "Tiếp tục" từ thẻ nhớ.
-- Mật mã lá bài (8 chữ số) giữ nguyên như bản gốc, tra cứu theo tên tiếng Anh.
+- Mật mã lá bài (8 chữ số) giữ nguyên như bản gốc, tra cứu theo tên tiếng Anh;
+  24 lá trước đây không có mật mã nay có mật mã mới (mục 6).
 
-## 8. Khi SHA-256 không khớp
+## 9. Khi SHA-256 không khớp
 
 - **Ảnh gốc ra chuỗi khác `6e22494a…`:** ảnh đĩa của bạn không phải bản mà bản
   vá được tạo từ đó. Nguyên nhân hay gặp: đọc đĩa ra kiểu `.iso` 2048 byte
@@ -283,7 +296,7 @@ DuckStation, ePSXe, Mednafen/Beetle PSX đều đọc được BIN/CUE.
   trên), áp lên file đã bị sửa khác, hoặc áp **cả hai** bản vá lên cùng một
   file. Làm lại từ bản sao gốc, mỗi file chỉ áp một bản vá.
 
-## 9. Câu hỏi thường gặp
+## 10. Câu hỏi thường gặp
 
 **Có thể dùng bản vá xdelta không?** Gói này phát hành PPF vì là chuẩn lâu năm
 cho PS1. Ai có sẵn hai ảnh đĩa có thể tự tạo xdelta bằng xdelta UI, kết quả
@@ -300,7 +313,7 @@ dịch.
 của file đã vá, tên giả lập, và ảnh chụp màn hình cùng câu thoại cuối cùng
 trước khi lỗi.
 
-## 10. Bản quyền
+## 11. Bản quyền
 
 Trò chơi, tên gọi, hình ảnh và âm thanh thuộc Konami và các chủ sở hữu liên
 quan. Bản vá chỉ chứa phần chữ dịch, phông chữ vẽ lại và các byte mã điều

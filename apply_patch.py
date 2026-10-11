@@ -19,10 +19,10 @@ SHA_GOC = '6e22494a45bf50fa2d239cd3819a57163a5f9b91e0365babc3e101509b5c3a7c'
 # ban va nhan biet qua dong mo ta trong dau file PPF (byte 6..55), nen doi ten file van dung
 SHA_DICH = {
     b'Yu-Gi-Oh! FM (SLUS-01411) - ban dich tieng Viet':
-        ('chi dich', 'df2efd2fe767e1972d6bda62a40b811ef80573d13c29e43fd3bb68d443b58bc9',
+        ('chi dich', '1d106601cb3726c7391841449662fbdba56c0c9972c8cb6c1d720dced69e9ccb',
          'Yu-Gi-Oh! Forbidden Memories (VN).bin'),
     b'Yu-Gi-Oh! FM (SLUS-01411) - Viet hoa + 5 la/tran':
-        ('dich + 5 la moi tran', 'a3ba3637dd14463e0d4215bcdff76e2586af0ada1546da237ce6246b349bfc42',
+        ('dich + 5 la moi tran', 'bd10e440b611fe7c99c9c1421d6b3491a940ebc82aa1b36084729001499588df',
          'Yu-Gi-Oh! Forbidden Memories (VN)(Mod5).bin'),
 }
 
