@@ -300,67 +300,7 @@ dịch.
 của file đã vá, tên giả lập, và ảnh chụp màn hình cùng câu thoại cuối cùng
 trước khi lỗi.
 
-## 10. Lịch sử phiên bản
-
-- **Bản hiện tại:** thêm dòng ghi công ở màn BẤM NÚT START, dưới dòng © 1996 KAZUKI
-  TAKAHASHI: "Bản Việt hóa phi lợi nhuận bởi KhươngKid" (bản 5 lá: "Bản Việt hóa và mod phi
-  lợi nhuận bởi KhươngKid"). Dòng này chỉ hiện ở màn đó, không hiện ở menu sau khi bấm START;
-  mọi màn khác giữ nguyên. SHA-256: bản chỉ dịch `df2efd2f…`, bản 5 lá `a3ba3637…`.
-- **Bản thứ chín:** chỉ đổi bản 5 lá. Gom được **đủ 722 lá** không cần cheat: 82 lá
-  trước đây không rơi nay rơi ở hạng S/A từ đối thủ dùng lá đó, 122 lá giá 999999
-  sao được hạ giá theo cấp, 24 lá chưa có mật mã được thêm mật mã thật (mục 6 và
-  [docs/them-bai-ban-5-la.md](docs/them-bai-ban-5-la.md)). SHA-256: bản 5 lá
-  `b6f200e5…`; bản chỉ dịch không đổi (`5b3fb6c8…`).
-- **Bản thứ tám:** rà soát toàn bộ trước khi phát hành. Nhân vật **mấp máy môi** khi nói
-  như bản gốc (bản trước đứng im). Các dòng căn giữa trong hộp thẻ nhớ, CHÚ Ý, chơi 2 người,
-  đổi bài, màn mật mã được căn lại theo độ rộng chữ Việt; giữ lề thụt đầu dòng ở hộp chọn thủ
-  hộ tinh, màn đổi bài, màn mật mã và ô khe thẻ nhớ. Số trong mô tả lá bài hiện liền ("hơn
-  100 trận", không còn "1 0 0"); mô tả không để một chữ lẻ loi ở dòng cuối (trừ khi phải tách
-  từ ghép). Màn nhập mật mã: nút **THOÁT** (trước là "HẾT"). Câu giới thiệu trận ("Vòng loại
-  trận 1" / "Yugi đấu …") lại tách hai dòng như bản gốc; bỏ chữ thừa trong "EAi Cập…";
-  "TRIỆU Exodia" thành "GOM ĐỦ Exodia"; "ĐANG TẢI..." / "ĐANG LƯU..." đủ dấu chấm. Vẽ lại
-  tiêu đề **CÀI ĐẶT** (OPTION) và nhãn **MỚI!** (New!) ở rương bài; ngôi sao chọn STEREO /
-  MONO trỏ đúng chữ MONO. Tên thủ hộ tinh: Sao Thiên Vương / Sao Diêm Vương / Sao Hải Vương.
-  Sửa dấu ngã của chữ hoa, dịch nốt vài chỗ còn tiếng Anh, viết lại khoảng 70 câu thoại và
-  mô tả cho tự nhiên hơn. SHA-256: bản chỉ dịch `5b3fb6c8…`, bản 5 lá `fd0b2f3f…`. **Ai đang
-  dùng bản trước nên áp lại bản này.**
-- **Bản thứ bảy:** sửa tên địa điểm bị **mất chữ đầu, dồn sát mép trái** ("ng Lớn", "n thờ")
-  ở Sân đấu và Cửa hàng bài từ đoạn cốt truyện bọn pháp sư phá sân đấu cũ trở đi. Bản gốc lúc
-  đó đổi tên hai nơi này thành "Old Duel Ground" / "Old Card Shop" bằng một lệnh nhảy mà bản
-  trước trỏ nhầm; nay hiện đúng **"Sân đấu cũ"** / **"Cửa hàng bài cũ"**, căn giữa. Cửa hàng bài
-  ẩn có tên riêng **"Cửa hàng bài bí mật"** (trước hiện nhầm "Cửa hàng bài"). SHA-256: bản
-  chỉ dịch `dc9980f7…`, bản 5 lá `9fb310e7…`.
-- **Bản thứ sáu:** "Prince …" dịch là "Hoàng tử …" (trước là "Ngài …"); các pháp sư nói
-  "Không ngờ ngươi lại tới được tận đây!" thay cho câu dịch sát chữ. SHA-256: bản chỉ dịch
-  `2116045a…`, bản 5 lá `51cc4fbc…`. **Ai đang dùng bản trước nên áp lại bản này.**
-- **Bản thứ năm:** tên địa điểm trên bản đồ (Cung điện Pharaoh, Đền Rừng, Sân đấu…) được
-  căn giữa khung theo độ rộng chữ thật, không còn lệch trái phải. Tên Bảo Vật Ngàn Năm theo
-  bản Việt của truyện: Trò Chơi Ngàn Năm, Vòng Tròn Trí Tuệ Ngàn Năm, Quyền Trượng Ngàn Năm,
-  Con Mắt Ngàn Năm; câu của Yugi dùng "tâm trí"; "Game Master" là Vua Trò Chơi; sửa thêm vài
-  câu theo cốt truyện (Yami Yugi là bản ngã thứ hai, cảnh DarkNite, hai Pháp sư Hoàng gia). SHA-256: bản chỉ dịch
-  `04018346…`, bản 5 lá `eeba9ad3…`. **Ai đang dùng bản trước nên áp lại bản này.**
-- **Bản thứ tư:** sửa lỗi **treo máy** khi chọn "VỀ MÀN TIÊU ĐỀ" ở cửa hàng bài
-  (menu xác nhận nay là KO / CÓ). Hộp thoại định dạng thẻ nhớ thành "XÓA THẺ? / HỦY /
-  CÓ". Menu cửa hàng căn giữa đều các dòng. Xưng hô thoại theo từng nhân vật (dân làng
-  lớn tuổi xưng "tôi", Simon/Sadin "thần – Người", pháp sư "ta/bọn ta – ngươi"…).
-  SHA-256: bản chỉ dịch `27557b2b…`, bản 5 lá `48de3b1c…`. **Ai đang dùng bản trước nên áp lại bản này.**
-- **Bản thứ ba:** câu thoại được dồn dòng: mỗi dòng lấp đầy ô thoại rồi mới
-  xuống dòng (736 trang thoại, kể cả câu có tên người chơi; không tách từ ghép
-  như "pháp sư", "sức mạnh"; tiếng hét kéo dài giữ nguyên). Bỏ khoảng hở thừa
-  trước tên người chơi. Màn kết quả: vẽ lại chữ KẾT QUẢ TRẬN ĐẤU, ĐÁNH GIÁ,
-  PHẦN THƯỞNG, Hạng; cột số BÀI DÙNG / LP CÒN LẠI thẳng hàng. Sửa các hộp thoại
-  thẻ nhớ: bỏ chữ viết tắt "Đ.DẠNG" (nay là "ĐỊNH DẠNG"),
-  bỏ khoảng hở trong "TẢI ?", "LƯU ?", "TẢI VỀ  XONG!", bỏ dòng bị thụt đầu
-  ("ĐỪNG CẮM/RÚT THẺ NHỚ" / "Ở KHE THẺ NHỚ 1"). Thêm dấu câu còn thiếu ở 11 câu
-  thoại. SHA-256: bản chỉ dịch `f6c5dd1d…`, bản 5 lá `0e69edd2…`.
-- **Bản thứ hai:** thêm bản vá `yugioh-fm-vi-5-la.ppf` (5 lá mỗi trận thắng,
-  màn kết quả hiện đủ 5 lá). Sửa màn kết quả ở cả hai bản: các nhãn chữ nhỏ
-  (BẠN / MÁY, ĐIỀU KIỆN THẮNG, THỐNG KÊ TẤN CÔNG / PHÒNG THỦ) trước đây mất chữ
-  có dấu và BẠN / MÁY lệch khỏi cột số liệu. SHA-256: bản chỉ dịch `e509924b…`,
-  bản 5 lá `3daf6f6c…`.
-- **Bản đầu tiên:** `yugioh-fm-vi.ppf`, SHA-256 file đã vá `685e55bf…`.
-
-## 11. Bản quyền
+## 10. Bản quyền
 
 Trò chơi, tên gọi, hình ảnh và âm thanh thuộc Konami và các chủ sở hữu liên
 quan. Bản vá chỉ chứa phần chữ dịch, phông chữ vẽ lại và các byte mã điều
